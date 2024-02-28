@@ -1,13 +1,11 @@
 "use client";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
-import { useSearchParams } from "next/navigation";
 
 export default function Search() {
   const [search, setSearch] = useState("");
 
   const Router = useRouter();
-  const SearchParams = useSearchParams();
   const handle = (e) => {
     e.preventDefault();
     Router.push(`/search?search=${search}`);
